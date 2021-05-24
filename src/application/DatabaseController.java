@@ -16,7 +16,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Locale;
 
 
 public class DatabaseController {
@@ -75,6 +74,7 @@ public class DatabaseController {
     public void setFK(String userId) {
         //from LoginController, the PK of the user that is logged in
         this.userId = userId;
+        initialize();
     }
 
     public void deleteBtnAction(ActionEvent actionEvent) {
@@ -279,7 +279,7 @@ public class DatabaseController {
                 if (car.getBrand().toLowerCase().contains(lowerCaseFilter)) {
                     return true; // search string is a match
                 } else if (car.getType().toLowerCase().contains(lowerCaseFilter)) {
-                    return false; // search string is a match
+                    return true; // search string is a match
                 }
                 return false; //does not match
             });

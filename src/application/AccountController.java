@@ -39,7 +39,7 @@ public class AccountController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LoginScene.fxml"));
             Parent root = (Parent) fxmlLoader.load();
 
-            //open the accounts scene
+            //open the login scene
             Stage stage = new Stage();
             stage.setTitle("Login");
             stage.setScene(new Scene(root));
