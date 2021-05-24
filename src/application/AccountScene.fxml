@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+<GridPane alignment="center" hgap="10" styleClass="root" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AccountController">
+
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25" />
+    </padding>
+
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+
+        <Text id="welcomeText" text="Accounts" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" />
+        <Label text="Username" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Password" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Retype Password" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <PasswordField fx:id="retypePasswordField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button onAction="#cancelButtonAction" text="Cancel" />
+            <Button onAction="#createAccountButtonAction" text="Create Account" />
+        </HBox>
+
+        <Text fx:id="errorMessage" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.columnSpan="2" />
+    </children>
+</GridPane>
+
